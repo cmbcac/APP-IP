@@ -1,0 +1,34 @@
+{
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "local",
+            "path": "/var/folders/kp/pjnd8ln51bd1v5l31s1hb8ww0000gp/T/org.apache.cordova.device/package"
+        }
+    },
+    "org.apache.cordova.file": {
+        "source": {
+            "type": "local",
+            "path": "/var/folders/kp/pjnd8ln51bd1v5l31s1hb8ww0000gp/T/org.apache.cordova.file/package"
+        }
+    },
+    "org.apache.cordova.file-transfer": {
+        "source": {
+            "type": "local",
+            "path": "/var/folders/kp/pjnd8ln51bd1v5l31s1hb8ww0000gp/T/org.apache.cordova.file-transfer/package"
+        }
+    },
+    "org.apache.cordova.geolocation": {
+        "source": {
+            "type": "local",
+            "path": "/var/folders/kp/pjnd8ln51bd1v5l31s1hb8ww0000gp/T/org.apache.cordova.geolocation/package"
+        }
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

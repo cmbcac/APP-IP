@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.greeninfo.mobilemapstarter" version="1.2.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>APP IPTV </name>
+    <description>
+        A starting framework for mobile maps using Cordova/Phonegap. A minimal but functional, standalone mobile app from which to build your own creations.
+        For more information, see the Github repository https://github.com/gregallensworth/MobileMapStarter
+    </description>
+    <author email="gregor@greeninfo.org" href="http://www.greeninfo.org/">
+        Greg Allensworth @ GreenInfo Network
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <plugins>
+    </plugins>
+    <preference name="phonegap-version" value="cli-5.2.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="splashscreen" value="splash" />
+    <preference name="splashscreendelay" value="3000" />
+    <preference name="iosPersistentFileLocation" value="Library" />
+    <preference name="BackupWebStorage" value="none" />
+</widget>

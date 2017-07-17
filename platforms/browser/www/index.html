@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- the phonegap.js stub is helpful for Phonegap Build to enable plugins and features. There is no phonegap.js -->
+	<meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; media-src *; img-src *; script-src * 'unsafe-inline' 'unsafe-eval'">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {font-family: "Lato", sans-serif}
+		.mySlides {display: none}
+	</style>
+    <title>MobileMapStarter</title>
+</head>
+<body>
+
+	<script src='https://www.google.com/jsapi'></script>
+	<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js'></script>
+	<script src='ext/underscore.min.js'></script>
+	<script src='ext/google_docs_televisio_local.js'></script>
+	<script src='ext/google_docs_IPTV.js'></script>
+
+
+	<!-- Navbar -->
+	<div class="w3-top">
+	  <div class="w3-bar w3-black w3-card-2">
+		<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu" style="color:#fff"><i class="fa fa-bars"></i></a>
+		
+		<a href="#mapa" data-ajax="false"class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="color:#fff">MAPA</a>
+		<a href="#formulari" data-ajax="false" class="w3-bar-item w3-button w3-padding-large w3-hide-small"  style="color:#fff">ALTA</a>
+		<a href="#contact" data-ajax="false"class="w3-bar-item w3-button w3-padding-large w3-hide-small"  style="color:#fff">CONTACT</a>
+	  </div>
+	</div>
+	
+	<!-- Navbar on small screens -->
+	<div id="navDemo" class="w3-bar-block w3-black w3-hide-large w3-hide-medium w3-top w3-hide" style="margin-top:46px;color:#fff">
+	  <a href="#mapa" data-ajax="false" class="w3-bar-item w3-button w3-padding-large"  style="color:#fff">MAPA</a>
+	  <a href="#formulari" data-ajax="false"  class="w3-bar-item w3-button w3-padding-large"  style="color:#fff">ALTA</a>
+	  <a href="#contact" data-ajax="false" class="w3-bar-item w3-button w3-padding-large"  style="color:#fff">CONTACTE</a>
+	</div>
+	
+	<!-- Page content -->
+	<div class="w3-content" style="max-width:2000px;margin-top:46px">
+	
+		<!-- Automatic Slideshow Images -->
+		<div class="mySlides w3-display-container w3-center">
+			<img src="img/logo-CAC.png" style="width:100%">
+			
+		</div>
+		
+		
+		 <!-- The Band Section -->
+		  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="mapa">
+			<h2 class="w3-wide">MAPA</h2>
+			<p class="w3-opacity"><i>We love music</i></p>
+			<p class="w3-justify">Descripcio daquest mapa. Ha sigut obtingut de la seguent manera. Les dades que es mostren.
+			Descripcio daquest mapa. Ha sigut obtingut de la seguent manera. Les dades que es mostren
+			Descripcio daquest mapa. Ha sigut obtingut de la seguent manera. Les dades que es mostren
+			Descripcio daquest mapa. Ha sigut obtingut de la seguent manera. Les dades que es mostren
+			Descripcio daquest mapa. Ha sigut obtingut de la seguent manera. Les dades que es mostren</p>
+			<div id="map_canvas" style="height:400px"></div>
+			
+		  </div>
+		  
+		<!-- The Tour Section -->
+		  <div class="w3-black" id="formulari">
+			<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+			  <h2 class="w3-wide w3-center">FORMULARI D'ALTA</h2>
+			  <p class="w3-opacity w3-center"><i>Empleneu aquest formulari per donar-vos d'alta.</i></p><br>
+			  <!-- START HERE -->
+			<form id="gform" method="POST" class="pure-form pure-form-stacked"
+			action="https://script.google.com/macros/s/AKfycbzbvuKS7jvQCupKnYgjiJekj4fL9gMCko5qjBe06QfckrraUd1T/exec">
+			<!-- change the form action to your script url -->
+
+				<fieldset class="pure-group" >
+					<label for="Entitat">Entitat * </label>
+					<input id="Entitat" name="Entitat" value="" 
+					required  />
+				</fieldset>
+				<br>
+				<fieldset class="pure-group">
+					<label for="TipusEntitat" class="select">Tipus Entitat</label>
+					<select name="Tipus entitat" id="TipusEntitat" data-mini="true">
+						<option value="PÚBLICA">Pública</option>
+						<option value="PRIVADA">Privada</option>
+					</select>
+				</fieldset>
+				<br>
+				<fieldset class="pure-group" >
+					<label for="NomComercial">Nom Comercial * </label>
+					<input id="NomComercial" name="Nom Comercial" value="" 
+					required/>
+				</fieldset>
+				<br>
+				<fieldset class="pure-group">
+					<label for="URL">URL * </label>
+					<textarea id="URL" name="URL" value=""
+					required rows="5"></textarea>
+				</fieldset>
+				<br>
+				<fieldset class="pure-group">
+					<label for="Programació" class="select">Programació</label>
+					<select name="Programació" id="Programació" data-mini="true">
+						<option value="Lineal">Lineal</option>
+						<option value="A la carta">A la carta</option>
+						<option value="En directe">En directe</option>
+						<option value="Web">Web</option>
+						<option value="Lineal i a la carta">Lineal i a la carta</option>
+						<option value="En directe + a la carta">En directe i a la carta</option>
+					</select>
+				</fieldset>
+				<br>
+				<fieldset class="pure-group" >
+					<label for="CanalTDT">Canal TDT  </label>
+					<input id="CanalTDT" name="Canal TDT" value="" >
+				</fieldset>
+				<br>
+				<fieldset class="pure-group" >
+					<label for="Xarxa">Xarxa  </label>
+					<input id="Xarxa" name="Xarxa" value="" >
+				</fieldset>
+				<br>
+				<fieldset class="pure-group" >
+					<label for="Youtube">Youtube  </label>
+					<input id="Youtube" name="Youtube" value="" >
+				</fieldset>
+				<br>
+				<fieldset class="pure-group" >
+					<label for="Població">Població  </label>
+					<input id="Població" name="Població" value="" >
+				</fieldset>
+				<br>
+				<fieldset class="pure-group">
+					<label for="Observacions">Observacions * </label>
+					<textarea id="Observacions" name="Observacions" value="" 
+					rows="10"></textarea>
+				</fieldset>
+				<br>
+				<fieldset class="pure-group">
+					<label for="Latitud">Latitud* </label>
+					<input id="Latitud" name="Latitude" value=""
+					required placeholder="Click al mapa" data-mini="true"/>
+				</fieldset>
+				
+				<fieldset class="pure-group">
+					<label for="Longitud">Longitud* </label>
+					<input id="Longitud" name="Longitude"value=""
+					required placeholder="Click al mapa" data-mini="true" />
+				</fieldset>
+				
+				<div id="map_form" style="height:250px"></div>
+				
+			
+				<button class="button-success pure-button button-xlarge" style="background-color:#295E86;color:white">
+					<i class="fa fa-paper-plane"> </i>&nbsp;Envia</button>	
+			</form>
+			
+			<!-- Customise the Thankyou Message People See when they submit the form: -->
+			<div style="display:none;" id="thankyou_message">
+				<h2>Les teves dades s'han transmès correctament! Moltes gràcies!</h2>
+			</div>
+
+			<!-- Submit the Form to Google Using "AJAX" -->
+
+			<script data-cfasync="false" type="text/javascript"
+			src="form-submission-handler.js"></script> 
+			<!-- END -->
+			</div>
+		  </div>
+		 <!-- The Contact Section -->
+		  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+		  
+			<h2 class="w3-wide w3-center">CONTACTE</h2>
+			<p class="w3-opacity w3-center"><i>Tens algun dubte? Contactan's!</i></p>
+			<div class="w3-row w3-padding-32">
+			  <div class="w3-col m6 w3-large w3-margin-bottom">
+				<i class="fa fa-map-marker" style="width:30px"></i> Carrer dels Vergós, 36-42 - 08017 Barcelona<br>
+				<i class="fa fa-phone" style="width:30px"></i> Telèfon: 93 557 50 00<br>
+				<i class="fa fa-envelope" style="width:30px"> </i> Email: audiovisual@gencat.cat<br>
+			  </div>
+			  <div class="w3-col m6">
+				<form action="/action_page.php" target="_blank">
+				  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+					<div class="w3-half">
+					  <input class="w3-input w3-border" type="text" placeholder="Nom" required name="Name">
+					</div>
+					<div class="w3-half">
+					  <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+					</div>
+				  </div>
+				  <input class="w3-input w3-border" type="text" placeholder="Missatge" required name="Message">
+				  <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+				</form>
+			  </div>
+			</div>
+		  </div>
+		  
+	
+
+	
+</div>
+
+<!--
+JAVASCRIPT CODE: putting it at the end of the BODY solves race conditions on iPad
+If you run this via Xcode or if you use weinre, or if you run on emulators,
+there's enough added lag that these race conditions will not happen
+but when you run it "for real" the deviceready simply never happens and your app doesn't work at all.
+-->
+    <!-- the stub for Cordova/Phonegap; this file doesn't exist but this entry must be here -->
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <!-- jQuery and JQ Mobile -->
+    <script type="text/javascript" src="libs/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.mobile-1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/jquery.mobile-1.4.0/jquery.mobile-1.4.0.css" />
+
+    <!-- Leaflet et al -->
+	<link rel="stylesheet" href="css/themes/CAC_APP.css" />
+	<link rel="stylesheet" href="ext/MarkerCluster.css" />
+	<link rel="stylesheet" href="ext/MarkerCluster.Default.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="libs/leaflet-0.7.2/leaflet.css" />
+    <script type="text/javascript" src="libs/leaflet-0.7.2/leaflet-src.js"></script>
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <!--<script type="text/javascript" src="libs/leaflet-tilelayer-cordova.js"></script>
+
+    <!-- weinre debugging for development; replace with your own IP address and your own weinre server -->
+    <!--
+    <script src="http://weinre.greeninfo.org:8080/target/target-script-min.js#mobilemapstarter"></script>
+    -->
+
+    <!-- our own custom stuff. on device ready, the init() function in index.js will be called to start up everything -->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="library.js"></script>
+	<script type="text/javascript" src="ext/leaflet.markercluster.js"></script>
+    
+	<script type="text/javascript">
+	function openUrl(url) {
+					
+		window.open(url, '_blank', 'location=yes');
+	}
+	
+    
+		// Automatic Slideshow - change image every 4 seconds
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		for (i = 0; i < x.length; i++) {
+		   x[i].style.display = "none";  
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}    
+		x[myIndex-1].style.display = "block";  
+		setTimeout(carousel, 4000);    
+	}
+
+	// Used to toggle the menu on small screens when clicking on the menu button
+	function myFunction() {
+		var x = document.getElementById("navDemo");
+		if (x.className.indexOf("w3-show") == -1) {
+			x.className += " w3-show";
+		} else { 
+			x.className = x.className.replace(" w3-show", "");
+		}
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	var modal = document.getElementById('ticketModal');
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+	if ( is_cordova() ) {
+        document.addEventListener("deviceready", init, false);
+    } else {
+        $(document).ready(init);
+    }
+    </script>
+	
+
+</body>
+</html>

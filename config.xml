@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.greeninfo.mobilemapstarter" version="1.2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>APP IPTV </name>
+    <description>
+        A starting framework for mobile maps using Cordova/Phonegap. A minimal but functional, standalone mobile app from which to build your own creations.
+        For more information, see the Github repository https://github.com/gregallensworth/MobileMapStarter
+    </description>
+    <author href="http://www.greeninfo.org/" email="gregor@greeninfo.org">
+        Greg Allensworth @ GreenInfo Network
+    </author>
+
+    <!-- the starting view page -->
+    <content src="index.html" />
+
+    <!-- allow HTTP downloads, e.g. for map tiles -->
+    <access origin="*" />
+	<preference name="phonegap-version" value="cli-5.2.0" />
+	
+	
+	<preference name="orientation" value="portrait" />
+	<preference name="stay-in-webview" value="false" />
+
+	<plugin name="org.apache.cordova.inappbrowser" version="1.7.0" />
+	<plugin name="org.apache.cordova.dialogs" version="0.2.2" />
+	<!--<plugin name="com.phonegap.plugins.pushplugin" version="2.0.5" />
+
+	<plugins>
+		<plugin name="InAppBrowser" value="CDVInAppBrowser" />
+	</plugins>
+
+	<feature name="InAppBrowser">
+		<param name="ios-package" value="CDVInAppBrowser" />
+	</feature>-->
+
+	
+    <preference name="splashscreen" value="splash" />
+    <preference name="splashscreendelay" value="3000" />
+
+    <!-- Apple Store compliance: do not backup our created files; still need to setMetadata() though -->
+    <preference name="iosPersistentFileLocation" value="Library" />
+    <preference name="BackupWebStorage" value="none" />
+	
+	<icon src="icons/ios/57_IP.png" gap:platform="ios" width="57" height="57" />
+	<icon src="icons/ios/72_IP.png" gap:platform="ios" width="72" height="72" />
+	<icon src="icons/ios/76_IP.png" gap:platform="ios" width="76" height="76" />
+	<icon src="icons/ios/114_IP.png" gap:platform="ios" width="114" height="114" />
+	<icon src="icons/ios/120_IP.png" gap:platform="ios" width="120" height="120" />
+	<icon src="icons/ios/144_IP.png" gap:platform="ios" width="144" height="144" />
+	<icon src="icons/ios/152_IP.png" gap:platform="ios" width="152" height="152" />
+</widget>
